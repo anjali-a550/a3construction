@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - A2DC</title>
+    <link rel="stylesheet" href="{% static 'css/resources.css' %}">
+     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="{% static 'images/logo2.png' %}" alt="Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'projects' %}">Projects</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'resources' %}">Resources</a></li>
+            </ul>
+        </nav>
+        
+        <div class="nav-right">
+            {% if user.is_authenticated %}
+                <div class="account-dropdown">
+                    <button class="account-btn">{{ user.username }} <i class="fas fa-caret-down"></i></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'logout' %}">Logout</a></li>
+                    </ul>
+                </div>
+            {% else %}
+                <div class="account-dropdown">
+                    <button class="account-btn">Account <i class="fas fa-caret-down"></i></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'login' %}">Login</a></li>
+                        <li><a href="{% url 'register' %}">Register</a></li>
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+    </header>
+
+    <!-- templates/resources/resources_home.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resources</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</head>
+<body class="container mt-5">
+    <h2 class="mb-4">Search Resources</h2>
+
+    <div class="form-group">
+        <select class="form-control" id="categorySelect">
+            <option value="">-- Select a Category --</option>
+            {% for cat in categories %}
+                <option value="{{ cat.id }}">{{ cat.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <script>
+        document.getElementById("categorySelect").addEventListener("change", function() {
+            const catId = this.value;
+            if (catId) {
+                window.location.href = `/resources/category/${catId}/`;
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 A2DC | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!-- partials/_header.html -->
+<header class="navbar">
+    <div class="logo">
+        <img src="{% static 'images/logo1.png' %}" alt="Logo">
+        <span>A2DC</span>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li class="dropdown">
+                <a href="#">Services <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Construction</a></li>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Development</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'projects' %}">Projects</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'careers' %}">Careers</a></li>
+        </ul>
+    </nav>
+    <div class="nav-right">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="support-btn">Get Support</a>
+    </div>
+</header>

@@ -1,0 +1,296 @@
+/* General Body */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0cccc;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #050808;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 12px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    height: 45px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-left: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    background-color: #F9B233;
+    color: black;
+    outline: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-right a {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-right a:hover,
+.nav-right a:focus {
+    color: #F9B233;
+    transform: scale(1.1);
+    outline: none;
+}
+
+/* This targets the dropdown inside a navbar list item */
+.account-dropdown {
+  position: relative;
+}
+
+.account-btn {
+  background-color: #F9B233;
+  color: white;
+  padding: 10px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  min-width: 140px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  z-index: 999;
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show on hover */
+.account-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Top Service Section */
+.top-service-sec {
+    background-color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.sec-title {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sec-title h1,
+.section-title h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.sec-title h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #F9B233;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Services Section */
+.services-section {
+    padding: 80px 20px;
+    background: #fff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Service Grid */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Service Box */
+.service-box {
+    width: 300px;
+    height: 340px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    background-color: #f9b233;
+}
+
+.service-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.service-content img.service-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.service-content h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.service-content p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer-logo img {
+    height: 50px;
+    margin-bottom: 15px;
+    filter: drop-shadow(2px 2px 5px #f9b233);
+}
+
+.footer-social a {
+    margin: 0 10px;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social .fb {
+    color: #3b5998;
+}
+
+.footer-social .ig {
+    color: #e1306c;
+}
+
+.footer-social .yt {
+    color: #ff0000;
+}
+
+.footer-social a:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* CTA Button */
+.cta-btn {
+    background-color: #F9B233;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #d89d1a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        width: 90%;
+    }
+}
+
+
+
+  

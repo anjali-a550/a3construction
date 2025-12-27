@@ -1,0 +1,21 @@
+<!-- base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A2DC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="{% static 'images/logo1.png' %}" type="image/png">
+</head>
+<body>
+
+{% include "partials/_header.html" %}
+{% block content %}{% endblock %}
+{% include "partials/_footer.html" %}
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
